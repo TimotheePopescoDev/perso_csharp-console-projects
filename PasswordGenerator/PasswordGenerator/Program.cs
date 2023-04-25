@@ -12,7 +12,7 @@ namespace PasswordGenerator
         {
             const int NB_PASSWORD = 10;
 
-            int lengthPassword = outils.AskPositifNumber("Longueur du mot de passe : ");
+            int lengthPassword = outils.AskPositifNumber("Length of the password : ");
 
 
             Console.WriteLine();
@@ -23,8 +23,8 @@ namespace PasswordGenerator
                 "4 - Letters, numbers and special characters \n" +
                 "Your choice : ", 1, 4);
 
-            string minuscules = "abcdefghijklmnopqrstuvwxyz";
-            string majuscules = minuscules.ToUpper();
+            string lowercase = "abcdefghijklmnopqrstuvwxyz";
+            string uppercase = lowercase.ToUpper();
             string numbers = "0123456789";
             string specialCharacters = "#&+-!$?_";
             string alphabet;
@@ -32,22 +32,22 @@ namespace PasswordGenerator
             Random rand = new Random();
 
             if (choiceAlphabet == 1)
-                alphabet = minuscules;
+                alphabet = lowercase;
             else if (choiceAlphabet == 2)
-                alphabet = minuscules + majuscules;
+                alphabet = lowercase + uppercase;
             else if (choiceAlphabet == 3)
-                alphabet = minuscules + majuscules + numbers;
+                alphabet = lowercase + uppercase + numbers;
             else
-                alphabet = minuscules + majuscules + numbers + specialCharacters;
+                alphabet = lowercase + uppercase + numbers + specialCharacters;
 
-            int longeurAlphabet = alphabet.Length;
+            int lengthAlphabet = alphabet.Length;
 
             for (int j = 0; j < NB_PASSWORD; j++)
             {
                 password = "";
                 for (int i = 0; i < lengthPassword; i++)
                 {
-                    int index = rand.Next(0, longeurAlphabet);
+                    int index = rand.Next(0, lengthAlphabet);
                     password += alphabet[index];
                 }
 
