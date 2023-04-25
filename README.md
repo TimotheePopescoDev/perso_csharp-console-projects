@@ -5,7 +5,6 @@ Creation of mini-projects in the console to learn the basics of C# programming. 
 
 ## FR
 
-***
 
 ### Mes minis-projets :
 
@@ -18,4 +17,3 @@ Creation of mini-projects in the console to learn the basics of C# programming. 
 
 ## EN
 
-***
