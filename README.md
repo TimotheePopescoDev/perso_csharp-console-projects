@@ -11,7 +11,7 @@ Creation of mini-projects in the console to learn the basics of C# programming. 
 - _MathsGame :_
 
 - _SecretNumber :_
-
+- _PasswordGenerator :_
 
 ***
 
